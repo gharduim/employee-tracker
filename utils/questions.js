@@ -10,9 +10,6 @@ module.exports = {
             "View All Employees",
             "View All Roles",
             "Update Employee's Role",
-            /*"View All Employees by Manager",
-            "Remove Employee",
-            "View All Employees by Department",*/
             "Remove Roles",
             "Exit"
         ]
@@ -77,6 +74,5 @@ module.exports = {
         message: "What is this employee's new role?",
         name: "newrole",
         choices: role
-            //return employee.map((employee) => employee.role_id);
     }]
 };

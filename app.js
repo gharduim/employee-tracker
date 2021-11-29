@@ -114,7 +114,6 @@ async function updateRole() {
             connection.query("SELECT employee.last_name as name FROM employee LEFT JOIN role ON employee.role_id = role.id", async (err, employee) => {
                 connection.query("SELECT role.id as value, role.title as name FROM employee LEFT JOIN role ON employee.role_id = role.id", async (err, role) => {
                     const updateDetails = await inquirer.prompt(questions.updateRole(employee, role))
-                    console.log(updateDetails)
                     connection.query("UPDATE employee SET ? WHERE ?",
                     [{
                         role_id: updateDetails.newrole,
